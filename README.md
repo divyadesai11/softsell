@@ -20,7 +20,7 @@ Built With
 - React State – For theme toggle and chat widget behavior
 
 Getting Started
-git clone https://github.com/your-username/softsell.git
+
 cd softsell
 npm install
 npm run dev
