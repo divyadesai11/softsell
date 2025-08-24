@@ -48,7 +48,7 @@ export default function Home() {
           <p className="text-xl mb-8">
             SoftSell helps you convert unused licenses into instant cash — fast, secure, and simple.
           </p>
-          <button className="btn-primary">Sell My Licenses</button>
+        <button className="bg-white text-blue-700 font-semibold py-3 px-6 rounded-full hover:bg-blue-100 transition"> Sell My Licenses </button>
         </section>
 
         {/* How It Works */}
