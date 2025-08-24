@@ -48,7 +48,7 @@ export default function Home() {
           <p className="text-xl mb-8">
             SoftSell helps you convert unused licenses into instant cash — fast, secure, and simple.
           </p>
-        <button className="bg-white text-blue-700 font-semibold py-3 px-6 rounded-full hover:bg-blue-100 transition"> Sell My Licenses </button>
+          <button className="bg-white text-blue-700 font-semibold py-3 px-6 rounded-full hover:bg-blue-100 transition"> Sell My Licenses </button>
         </section>
 
         {/* How It Works */}
@@ -107,8 +107,14 @@ export default function Home() {
         </section>
 
         {/* Contact Form */}
-        <section className={`py-20 px-6 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'}`}>
-          <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
+        <section
+          className={`py-20 px-6 ${
+            darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-800'
+          }`}
+        >
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Contact Us
+          </h2>
           <form className="max-w-2xl mx-auto space-y-6">
             {[
               { label: 'Name', type: 'text', placeholder: 'Your Name' },
@@ -116,18 +122,34 @@ export default function Home() {
               { label: 'Company', type: 'text', placeholder: 'Company Name' },
             ].map((field, i) => (
               <div key={i}>
-                <label className="block mb-1 font-medium">{field.label}</label>
+                <label className="block mb-1 font-medium">
+                  {field.label}
+                </label>
                 <input
                   type={field.type}
-                  placeholder={field.placeholder}
                   required
-                  className={`input ${darkMode ? 'input-dark' : 'input-light'}`}
+                  className={`w-full px-4 py-2 rounded-md ${
+                    darkMode
+                      ? 'bg-gray-800 border-gray-700 text-white'
+                      : 'bg-white border border-gray-300 text-gray-800'
+                  }`}
+                  placeholder={field.placeholder}
                 />
               </div>
             ))}
+
             <div>
-              <label className="block mb-1 font-medium">License Type</label>
-              <select required className={`input ${darkMode ? 'input-dark' : 'input-light'}`}>
+              <label className="block mb-1 font-medium">
+                License Type
+              </label>
+              <select
+                className={`w-full px-4 py-2 rounded-md ${
+                  darkMode
+                    ? 'bg-gray-800 border-gray-700 text-white'
+                    : 'bg-offwhite border border-gray-300 text-gray-800'
+                }`}
+                required
+              >
                 <option value="">Choose an option</option>
                 <option>Operating System</option>
                 <option>Productivity Tools</option>
@@ -135,16 +157,27 @@ export default function Home() {
                 <option>Antivirus</option>
               </select>
             </div>
+
             <div>
               <label className="block mb-1 font-medium">Message</label>
               <textarea
                 rows={4}
-                placeholder="Write your message..."
                 required
-                className={`input ${darkMode ? 'input-dark' : 'input-light'}`}
+                className={`w-full px-4 py-2 rounded-md ${
+                  darkMode
+                    ? 'bg-gray-800 border-gray-700 text-white'
+                    : 'bg-white border border-gray-300 text-gray-800'
+                }`}
+                placeholder="Write your message..."
               ></textarea>
             </div>
-            <button type="submit" className="btn-primary">Send Message</button>
+
+            <button
+              type="submit"
+              className="bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition"
+            >
+              Send Message
+            </button>
           </form>
         </section>
 
